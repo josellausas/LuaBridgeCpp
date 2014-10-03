@@ -1,4 +1,6 @@
 
-variable1 = "Lua"
+print("Hola desde Lua")
 
-print("Hola " .. variable1 .. " desde Lua")
+variable1 = "Lua"
+variable2 = "1337"
+
