@@ -6,6 +6,7 @@ class LuaBridge;
 
 using namespace std;
 
+// Tests getting a string variable from Lua
 const char* test01(LuaBridge* b)
 {
 	const char* aStringFromLua = b->getString("variable1");
@@ -21,6 +22,7 @@ const char* test01(LuaBridge* b)
 
 }
 
+// Tests getting a number variable from Lua
 const char* test02(LuaBridge* b)
 {
 	int aNumberFromLua = b->getInt("variable2");
@@ -45,12 +47,9 @@ int main(int argc, char** argv)
 	// Parse a lua file
 	b->parseFile("test.lua");
 	
-	// Test that file
+	// Runs a series of tests
 	cout << "Test01: " << test01(b) << endl;
 	cout << "Test02: " << test02(b) << endl;
-
-
-
 
 	return 0;
 }
