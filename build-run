@@ -1,0 +1,3 @@
+#!/bin/bash
+#compiles and runs this project
+g++ LuaBridge.cpp -o runit -llua && ./runit
